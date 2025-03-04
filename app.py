@@ -56,6 +56,16 @@ fig2 = px.scatter(df_filtrado, x="model_year", y="price", opacity=0.5, title="A�
 fig2.update_layout(width=900, height=500)
 st.plotly_chart(fig2, use_container_width=True)
 
+# Verificar que el dataframe filtrado no esté vacío antes de contar
+if not df_filtrado.empty:
+    # Contar cantidad de autos por tipo
+    conteo_tipos = df_filtrado["type"].value_counts().reset_index()
+    conteo_tipos.columns = ["Tipo de Auto", "Cantidad"]  # Renombrar columnas correctamente
+else:
+    # Crear un dataframe vacío para evitar errores
+    conteo_tipos = pd.DataFrame(columns=["Tipo de Auto", "Cantidad"])
+
+
 # 📊 Gráfico de barras de cantidad por tipo de auto
 st.subheader("🚗 Cantidad de Autos por Tipo (Filtrado)")
 fig3 = px.bar(conteo_tipos, x="Tipo de Auto", y="Cantidad", title="Cantidad de Autos por Tipo (Filtrado)", text_auto=True)

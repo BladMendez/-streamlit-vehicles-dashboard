@@ -75,7 +75,7 @@ st.plotly_chart(fig3, use_container_width=True)
 
 st.markdown("""
     <style>
-    /* Fondo sólido sin GIF */
+    /* Fondo sólido de la aplicación */
     .main {
         background-color: #f5f7fa; /* Un gris claro limpio */
     }
@@ -84,6 +84,16 @@ st.markdown("""
     section[data-testid="stSidebar"] {
         background-color: #1e3c72 !important;
         padding: 20px;
+        border-radius: 10px;
+    }
+
+    /* Ajuste del color de los textos en el Sidebar */
+    section[data-testid="stSidebar"] h2, 
+    section[data-testid="stSidebar"] h3, 
+    section[data-testid="stSidebar"] h4, 
+    section[data-testid="stSidebar"] label {
+        color: white !important;
+        font-weight: bold;
     }
 
     /* Ajuste del ancho máximo de los gráficos */
@@ -91,7 +101,7 @@ st.markdown("""
         width: 100% !important;
     }
 
-    /* Restaurar títulos visibles */
+    /* Restaurar títulos visibles en la app */
     h1, h2, h3, h4 {
         color: #1e3c72 !important;
         text-align: center;
@@ -100,6 +110,7 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
+
 
 
 st.markdown('<div class="main">', unsafe_allow_html=True)  # Activa el fondo

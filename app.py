@@ -67,6 +67,11 @@ fig3.update_layout(height=500, width=1000)  # Ajusta el tamaño manualmente
 st.plotly_chart(fig3, use_container_width=True)
 
 
+st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig2, use_container_width=True)
+st.plotly_chart(fig3, use_container_width=True)
+
+
 st.markdown("""
     <style>
     /* Fondo sólido sin GIF */

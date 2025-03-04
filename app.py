@@ -47,28 +47,19 @@ else:
     # 📈 Histograma de precios
 st.subheader("📈 Distribución de Precios de los Vehículos (Filtrado)")
 fig = px.histogram(df_filtrado, x="price", nbins=50, title="Distribución de Precios de los Vehículos")
-fig.update_layout(height=500, width=1000)  # Ajusta el tamaño manualmente
+fig.update_layout(width=900, height=500)  # Ajustar el tamaño manualmente
 st.plotly_chart(fig, use_container_width=True)
 
 # 📊 Gráfico de dispersión Año vs Precio
 st.subheader("📊 Relación entre Año del Modelo y Precio (Filtrado)")
-fig2 = px.scatter(df_filtrado, x="model_year", y="price", size="price", opacity=0.7, title="Año del Modelo vs Precio")
-fig2.update_layout(height=500, width=1000)  # Ajusta el tamaño manualmente
+fig2 = px.scatter(df_filtrado, x="model_year", y="price", opacity=0.5, title="Año del Modelo vs Precio")
+fig2.update_layout(width=900, height=500)
 st.plotly_chart(fig2, use_container_width=True)
 
-# 📊 Gráfico de barras Cantidad de Autos por Tipo
-st.subheader("📊 Cantidad de Autos por Tipo (Filtrado)")
-fig3 = px.bar(conteo_tipos, 
-              x="Tipo de Auto", y="Cantidad", 
-              title="Cantidad de Autos por Tipo (Filtrado)",
-              labels={"Tipo de Auto": "Tipo de Auto", "Cantidad": "Cantidad"},
-              text_auto=True)
-fig3.update_layout(height=500, width=1000)  # Ajusta el tamaño manualmente
-st.plotly_chart(fig3, use_container_width=True)
-
-
-st.plotly_chart(fig, use_container_width=True)
-st.plotly_chart(fig2, use_container_width=True)
+# 📊 Gráfico de barras de cantidad por tipo de auto
+st.subheader("🚗 Cantidad de Autos por Tipo (Filtrado)")
+fig3 = px.bar(conteo_tipos, x="Tipo de Auto", y="Cantidad", title="Cantidad de Autos por Tipo (Filtrado)", text_auto=True)
+fig3.update_layout(width=900, height=500)
 st.plotly_chart(fig3, use_container_width=True)
 
 

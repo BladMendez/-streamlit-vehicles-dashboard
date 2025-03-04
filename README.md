@@ -47,6 +47,8 @@ Este es un **dashboard interactivo** desarrollado con **Streamlit** para analiza
 
 Despliegue
 
+streamlit-vehicles-dashboard/ │── notebooks/ # Jupyter notebooks de análisis │── streamlit_vehicles_dashboard/ # Código fuente del dashboard │── vehicles_env/ # Entorno virtual (excluido en el repo) │── app.py # Script principal de la aplicación │── requirements.txt # Dependencias del proyecto │── vehicles_us.csv # Dataset de anuncios de vehículos │── README.md # Documentación del proyecto
+
 Este dashboard ha sido desplegado en **Streamlit Cloud**, permitiendo acceder a la aplicación desde cualquier navegador.
 
 🔗 **[Accede a la aplicación aquí](https://master-d4c85pdev4tkosxuiqdghu.streamlit.app/ )**

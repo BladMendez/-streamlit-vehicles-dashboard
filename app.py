@@ -91,9 +91,15 @@ st.markdown("""
     section[data-testid="stSidebar"] h2, 
     section[data-testid="stSidebar"] h3, 
     section[data-testid="stSidebar"] h4, 
-    section[data-testid="stSidebar"] label {
+    section[data-testid="stSidebar"] label, 
+    section[data-testid="stSidebar"] div {
         color: white !important;
         font-weight: bold;
+    }
+
+    /* Ajuste del color de los números en los sliders */
+    section[data-testid="stSidebar"] span {
+        color: white !important;
     }
 
     /* Ajuste del ancho máximo de los gráficos */
@@ -110,6 +116,7 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
+
 
 
 
